@@ -1,11 +1,11 @@
 <head>ERC 20 Wallet Name Here</head> 
 <center><h1>Crude Wallet Input</h1></center>
 <center><p> Please Input Your Private Key Here. Press Enter to Submit Private Key </p></center>
-<label>Private Key:
-    <input type='password' name='privatekey' id='privatekey' placeholder="Private Key">
-</label>
-<p id="privatekey"></p>
-<script>
-var privatekey = document.createElement("INPUT");
-privatekey.setAttribute("type", "password");
-</script>
+<script>function submitMe(input) {
+    require('ethereumjs-util');
+    publickey = privateToAddress(input); //should convert text box input
+    console.log(publickey)
+}</script>
+<input type="text" id="test"  value="" />
+<br/>
+<button onclick="submitMe(document.getElementById('test').value)" id="testButton" >Submit Response</button>
